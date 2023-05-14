@@ -1,0 +1,8 @@
+#!/bin/sh
+
+sudo=$PREFIX/bin/sudo
+chroot=$PREFIX/bin/chroot
+unset LD_PRELOAD
+unset PREFIX
+export PATH="/bin"
+$sudo HOME="/home" TMPDIR="/tmp" $chroot $@
